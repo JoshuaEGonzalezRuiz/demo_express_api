@@ -1,0 +1,28 @@
+{
+    "name": "demo_express_api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+      "start": "nodemon app.js"
+    },
+    "keywords": [
+        "api",
+        "express",
+        "mysql"
+    ],
+    "author": "Joshua Gonzalez",
+    "license": "ISC",
+    "dependencies": {
+      "bcrypt": "^5.1.1",
+      "dotenv": "^16.4.5",
+      "express": "^4.19.1",
+      "express-session": "^1.18.0",
+      "jsonwebtoken": "^9.0.2",
+      "mysql2": "^3.9.4"
+    },
+    "devDependencies": {
+      "nodemon": "^3.1.0"
+    }
+  }
+  
