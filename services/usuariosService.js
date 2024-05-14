@@ -18,17 +18,7 @@ async function obtenerPorNombre(nombre) {
     }
 }
 
-async function obtenerPorId(id) {
-    try {
-        return await usuariosModel.obtenerPorId(id);
-    } catch (error) {
-        console.error('Error al obtener usuario por ID en el servicio:', error);
-        throw error;
-    }
-}
-
 module.exports = {
     registrar,
-    obtenerPorNombre,
-    obtenerPorId
+    obtenerPorNombre
 };

@@ -58,12 +58,12 @@ async function actualizarCantidad(cantidad, productoId) {
     }
 }
 
-async function quitarProducto(productoId) {
+async function quitarProducto(usuarioId, productoId) {
     const conexion = await obtenerConexion();
     try {
         await conexion.query(
-            `DELETE FROM carrito WHERE producto_id = ?`,
-            [productoId]
+            `DELETE FROM carrito WHERE producto_id = ? AND usuario_id = ?`,
+            [productoId, usuarioId]
         );
         console.log('Producto eliminado del carrito correctamente');
     } catch (error) {

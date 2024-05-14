@@ -26,21 +26,7 @@ async function obtenerPorNombre(nombre) {
     }
 }
 
-async function obtenerPorId(id) {
-    const conexion = await obtenerConexion();
-    try {
-        const [results] = await conexion.query('SELECT * FROM usuarios WHERE id = ?', [id]);
-        return results[0];
-    } catch (error) {
-        console.error('Error al obtener usuario por ID en el modelo:', error);
-        throw error;
-    } finally {
-        conexion.release(); // Liberar la conexión al finalizar
-    }
-}
-
 module.exports = {
     registrar,
-    obtenerPorNombre,
-    obtenerPorId
+    obtenerPorNombre
 };

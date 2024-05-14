@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 const routes = require('./routes/routes');
+const dotenv = require('dotenv');
+
+//Configura DotEnv
+dotenv.config();
 
 // Middleware para parsear JSON
 app.use(express.json());
